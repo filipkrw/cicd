@@ -1,0 +1,11 @@
+name: Echo
+description: Echo stuff
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Echo
+      shell: bash
+      run: |
+        echo env

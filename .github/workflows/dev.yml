@@ -2,12 +2,13 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  dev:
+  hello-world:
     environment: dev
     runs-on: ubuntu-latest
-    env:
-      SHH_SECRET: ${{ secrets.SHH_SECRET }}
-      NORMAL_VARIABLE: ${{ vars.NORMAL_VARIABLE }}
     steps:
-      - run: env
-      - run: echo $NORMAL_VARIABLE
+      - run: echo "Hello World"
+      - name: Echo  
+        uses: .github/actions/echo
+        env:
+          SHH_SECRET: ${{ secrets.SHH_SECRET }}
+          NORMAL_VARIABLE: ${{ vars.NORMAL_VARIABLE }}

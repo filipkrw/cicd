@@ -8,7 +8,7 @@ jobs:
     steps:
       - run: echo "Hello World"
       - name: Echo  
-        uses: .github/actions/echo
+        uses: /.github/actions/echo
         env:
           SHH_SECRET: ${{ secrets.SHH_SECRET }}
           NORMAL_VARIABLE: ${{ vars.NORMAL_VARIABLE }}

@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SHH_SECRET: ${{ secrets.SHH_SECRET }}
+      NORMAL_VARIABLE: ${{ secrets.NORMAL_VARIABLE }}
     steps:
+      - run: env
       - run: echo $NORMAL_VARIABLE

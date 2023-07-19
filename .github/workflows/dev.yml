@@ -5,8 +5,14 @@ jobs:
   hello-world:
     environment: dev
     runs-on: ubuntu-latest
+    
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
       - run: echo "Hello World"
+
       - name: Echo  
         uses: ./.github/actions/echo
         env:
